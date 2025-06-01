@@ -34,7 +34,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🔹 Use /token to generate tokens\n"
         "🔹 Use /updatetoken to update GitHub\n"
         "🔹 Use /delete to remove your data\n"
-        "Owner: @LipuGaming_ff"
+        "Owner: @dg_gaming_1m"
     )
 
 async def newuser_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
