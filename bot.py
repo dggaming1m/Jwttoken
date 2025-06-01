@@ -8,7 +8,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandl
 from github import Github, GithubException
 
 # Configuration
-TELEGRAM_TOKEN = "77491481953:AAEEE_QN9emVhFGXdfTpS2KUQCtdovOlWdk"
+TELEGRAM_TOKEN = "7491481953:AAEEE_QN9emVhFGXdfTpS2KUQCtdovOlWdk"
 TOKEN_API = "https://uditanshu-jwt.vercel.app/token?uid={uid}&password={password}"
 
 # User data storage
