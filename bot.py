@@ -249,7 +249,7 @@ def main():
     application.add_handler(CommandHandler("delete", delete_command))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_messages))
     application.add_handler(MessageHandler(filters.Document.ALL, handle_document))
-    print("✅ Bot is running... Owner-@LipuGaming_ff")
+    print("✅ Bot is running... Owner-@dg_gaming_1m")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == "__main__":
