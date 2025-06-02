@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: telegram-token-bot
+    runtime: python
+    repo: https://github.com/dggaming1m/jwttoken # <-- Replace this
+    branch: bot
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your_token_here  # Optional, if you're using env variable
+PyGithub
