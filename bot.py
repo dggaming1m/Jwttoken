@@ -2,7 +2,8 @@ import os
 import json
 import requests
 import datetime
-
+from flask import Flask
+import threading
 from telegram import Update, InputFile
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 from github import Github, GithubException
@@ -252,5 +253,15 @@ def main():
     print("✅ Bot is running... Owner-@dg_gaming_1m")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
-if __name__ == "__main__":
-    main()
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "✅ Bot is live!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+# Start Flask in a new thread
+threading.Thread(target=run_flask).start()
